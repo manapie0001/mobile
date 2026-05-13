@@ -7,9 +7,19 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04   # более стабильная версия для buildozer
     steps:
       - uses: actions/checkout@v4
+
+      - name: Install system dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y \
+            git zip unzip wget curl \
+            build-essential libffi-dev libssl-dev \
+            zlib1g-dev liblzma-dev libbz2-dev \
+            libsqlite3-dev libreadline-dev \
+            autoconf automake libtool autoconf-archive pkg-config
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -17,7 +27,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install buildozer
-        run: pip install buildozer
+        run: pip install cython buildozer
 
       - name: Build APK
         run: buildozer android debug
