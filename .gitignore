@@ -1,0 +1,20 @@
+# Buildozer & Android build artifacts
+.buildozer/
+bin/
+__pycache__/
+*.pyc
+*.pyo
+*.so
+
+# Virtual environments
+kivy_venv_310/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
