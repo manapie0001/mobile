@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04   # более стабильная версия для buildozer
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
 
@@ -28,6 +28,9 @@ jobs:
 
       - name: Install buildozer
         run: pip install cython buildozer
+
+      - name: Clean buildozer cache
+        run: rm -rf ~/.buildozer
 
       - name: Build APK
         run: buildozer android debug

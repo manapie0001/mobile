@@ -11,6 +11,7 @@ package.domain = org.example
 
 version = 0.1
 python_version = 3.11
+python_requires = 3.11
 
 # (str) Source code directory
 source.dir = .
@@ -19,7 +20,7 @@ source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 
 # (list) Requirements (Python packages)
-requirements = python3,kivy==2.2.1,plyer==2.1,requests==2.31.0,kivy-garden.mapview==23.09.0
+requirements = python3==3.11s,kivy==2.2.1,plyer==2.1,requests==2.31.0,kivy-garden.mapview==23.09.0
 
 # (str) Entry point for the app (main file)
 source.main = main.py
