@@ -27,6 +27,9 @@ source.main = main.py
 # (list) Permissions for Android
 android.permissions = INTERNET, ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION, ACCESS_NETWORK_STATE
 
+android.accept_sdk_license = True
+android.build_tools = 33.0.2
+
 # (int) Target Android API level
 android.api = 33
 
@@ -37,7 +40,7 @@ android.minapi = 21
 android.sdk = 33
 
 # (str) Android NDK version (optional)
-# android.ndk = 23b
+ android.ndk = 25c
 
 # (bool) Use AndroidX instead of Android support library
 android.use_androidx = True
